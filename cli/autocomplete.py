@@ -33,7 +33,7 @@ ac_table = {
             '--download-proxy',
             '--index-data-url',
             '--port-expose',
-            '--shards',
+            '--replicas',
             '--unblock-query-flow',
         ],
         'hello multimodal': [
