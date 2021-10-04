@@ -4,9 +4,9 @@ with:
   port_expose: 12345
   protocol: http
 executors:
-  - name: local_shards
+  - name: local_replicas
     port_in: 45678
-    shards: 2
+    replicas: 2
   - name: remote_container
     uses: docker://exec
     host: 1.2.3.4
@@ -14,6 +14,6 @@ executors:
     uses: CustomExecutor
     replicas: 2
     shards: 2
-  - name: local_container_shards
+  - name: local_container_replicas
     uses: docker://exec
-    shards: 2
+    replicas: 2

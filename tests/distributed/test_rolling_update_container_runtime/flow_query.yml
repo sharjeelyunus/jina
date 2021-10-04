@@ -6,8 +6,11 @@ with:
 executors:
   - name: indexer_query
     uses: docker://query-executor
-    replicas: 2
-    parallel: 1
+    shards: 2
+    replicas: 1
     polling: all
     timeout_ready: '-1'
     volumes: $JINAD_WORKSPACE:/jinad_workspace
+
+# replicas -> shards
+# parallel -> replicas
