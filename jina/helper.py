@@ -1201,7 +1201,6 @@ def run_async(func, *args, **kwargs):
             else:
                 thread_exc = getattr(thread, 'exception', None)
                 if thread_exc is not None:
-                    print(f' Joan here thread exception {thread_exc}')
                     raise thread_exc
                 else:
                     from .excepts import BadClient
